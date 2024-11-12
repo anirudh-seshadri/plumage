@@ -1,10 +1,175 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Defines doc type to be HTML5 and sets language to English -->
     <meta charset="UTF-8">
+    <!-- Sets viewport for responsive design, content will adapt to device width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plumage</title>
+    <!-- Title of the webpage -->
+    <title>Plumage - Birds in French Arts & Culture</title>
+    
+    <style>
+        /* Defines CSS variable for main purple color for consistency across the site, since we're using the same theme */
+        :root {
+            --main-purple: #524B7A;
+        }
+
+        /* Basic reset for body styling to remove default margin and padding */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff; /* Set white background for the main content */
+        }
+
+        /* Styling for header section */
+        .header {
+            background-color: #fff; /* White background */
+            position: relative; /* Allows absolute positioning of child elements */
+            height: 275px; /* Fixed height for header section */
+            overflow: hidden; /* Hides any content that goes past header bounds */
+        }
+
+        /* Styles for header background image */
+        .header-background {
+            position: absolute; /* Positioned relative to the nearest positioned ancestor (header) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; /* Stretches image to cover full header area */
+            background-image: url('plumageheader.jpg'); /* Path to header background image */
+            background-size: cover; /* Scales image to cover container completely */
+            background-position: center; /* Centers image */
+            background-repeat: no-repeat; /* Prevents image from repeating */
+            z-index: 0; /* Puts image behind other header content */
+        }
+
+        /* Nav bar styling */
+        .nav-bar {
+            background-color: var(--main-purple); /* Set background to main theme color */
+            padding: 10px 40px; /* Adds padding around content */
+            text-align: right; /* Aligns nav links to right */
+        }
+
+        /* Styles for each nav link */
+        .nav-bar a {
+            color: white; /* Set link text color to white for contrast */
+            text-decoration: none; /* Remove underline from links */
+            margin-left: 150px; /* Space between navigation links */
+            font-size: 36px;
+            font-weight: normal;
+            font-family: Arial, sans-serif; 
+        }
+
+        /* Container for main content */
+        .content {
+            max-width: 1200px; /* Limits content width */
+            margin: 40px auto; /* Center content with margin on top and bottom */
+            padding: 0 40px; /* Adds padding inside content for spacing */
+            text-align: left; /* Aligns content text to the left */
+        }
+
+        /* Styling for main issue title */
+        .issue-title {
+            font-size: 60px; 
+            font-style: italic; /* Italicizes title */
+            font-weight: bold; /* Bold font weight */
+            color: var(--main-purple); /* Matches theme color */
+            margin-bottom: 20px; /* Adds spacing below title */
+        }
+
+        /* Styling for issue information text */
+        .issue-info {
+            font-size: 36px; 
+            color: var(--main-purple); /* Uses theme color */
+            margin-bottom: 30px; /* Adds space below */
+            font-family: Arial, sans-serif; 
+            font-weight: normal;
+            line-height: 1.2; /* Adjusts line spacing */
+        }
+
+        /* Editor's statement styling */
+        .editor-statement {
+            font-size: 24px; /* Font size for secondary heading */
+            line-height: 1.4; /* Spacing between lines */
+            color: var(--main-purple); /* Theme color */
+            margin: 0; /* Removes margin */
+            text-align: left; /* Aligns text to left */
+        }
+
+        /* White divider line below the navigation bar */
+        .white-line {
+            height: 2px; /* Height of line */
+            background-color: white; /* White color to separate sections */
+            margin-top: -2px; /* Adjusts positioning to align closely with nav bar */
+        }
+
+        /* Container for magazine content with shadow and border */
+        #magazine {
+            width: 800px; /* Set magazine container width */
+            height: 500px; /* Set magazine container height */
+            margin: 40px 0; /* Spacing around the container */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for 3D effect */
+            border: 1px solid #ddd; /* Light border for definition */
+            padding: 20px; /* Inner padding */
+        }
+    </style>
 </head>
 <body>
-    plumage
+    <!-- Header section containing logo and background image -->
+    <header class="header">
+        <div class="header-background"></div> <!-- Header background image -->
+        <div class="header-content">
+            <a href="/" class=""></a> 
+        </div>
+    </header>
+
+    <!-- Nav bar with links to other sections of site -->
+    <nav class="nav-bar">
+        <a href="/archives">archives</a>
+        <a href="/about">about</a>
+        <a href="/more">more</a>
+    </nav>
+    <div class="white-line"></div> <!-- White divider line below nav bar -->
+
+    <!-- Main content section -->
+    <main class="content">
+        <h1 class="issue-title">Le Cygne / The Swan</h1> 
+        <div class="issue-info">
+            issue 01<br>
+            11.30.2024
+        </div> <!-- Info about issue -->
+
+        <!-- Editor's statement to introduce issue -->
+        <div class="editor-statement">
+            The Editor's statement. Embed the issue below so that it appears as spread and is flipped when going to next page.
+        </div>
+
+        <!-- Container for magazine flipbook content(currently just put placeholders here)-->
+        <div id="magazine">
+            <div style="background: white; padding: 40px;">Page 1 content here</div> 
+            <div style="background: white; padding: 40px;">Page 2 content here</div> 
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- turn.js library for flipbook effect -->
+    <script src="turn.js"></script>
+    <script>
+        $(document).ready(function() { // This is to prevent any jQuery code from running before the document is finished loading (is ready).
+            // Initialize flipbook effect for the magazine container
+            $("#magazine").turn({ // jQuery syntax: $(selector).action()
+                display: 'double',  // Display pages as spread (two pages at once)
+                acceleration: true,  // Enable hardware acceleration for smoother animation
+                gradients: !$.isTouch,  // Show gradients if not on touch device
+                elevation: 50,  // Set elevation for the 3D effect when turning pages
+                when: {
+                    turned: function(e, page) {
+                        console.log('Current page: ' + page);
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
