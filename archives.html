@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Defines doc type to be HTML5 and sets language to English -->
-    <meta charset="UTF-8">
-    <!-- Sets viewport for responsive design, content will adapt to device width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title of the webpage -->
-    <title>Plumage</title>
+  <!-- Defines doc type to be HTML5 and sets language to English -->
+  <meta charset="UTF-8">
+  <!-- Sets viewport for responsive design, content will adapt to device width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage -->
+  <title>Plumage</title>
 
-    <style>
+  <style>
         /* Defines CSS variable for main purple color for consistency across the site, since we're using the same theme */
         :root {
             --main-purple: #524B7A;
@@ -116,46 +116,46 @@
     </style>
 </head>
 <body>
-    <!-- Header section containing logo and background image -->
-    <header class="header">
-        <div class="header-background"></div> <!-- Header background image -->
-        <div class="header-content">
-            <a href="/" class=""></a>
-        </div>
-    </header>
+<!-- Header section containing logo and background image -->
+<header class="header">
+  <div class="header-background"></div> <!-- Header background image -->
+  <div class="header-content">
+    <a href="/" class=""></a>
+  </div>
+</header>
 
-    <!-- Nav bar with links to other sections of site -->
-    <nav class="nav-bar">
-        <a href="/archives">archives</a>
-        <a href="/about">about</a>
-        <a href="/more">more</a>
-    </nav>
-    <div class="white-line"></div> <!-- White divider line below nav bar -->
+<!-- Nav bar with links to other sections of site -->
+<nav class="nav-bar">
+  <a href="/archives">archives</a>
+  <a href="/about">about</a>
+  <a href="/more">more</a>
+</nav>
+<div class="white-line"></div> <!-- White divider line below nav bar -->
 
-    <!-- Main content section -->
-    <main class="content">
-        <h1 class="issue-title">Le Cygne / The Swan</h1>
-        <div class="issue-info">
-            issue 01<br>
-            11.30.2024
-        </div> <!-- Info about issue -->
+<!-- Main content section -->
+<main class="content">
+  <h1 class="issue-title">Le Cygne / The Swan</h1>
+  <div class="issue-info">
+    issue 01<br>
+    11.30.2024
+  </div> <!-- Info about issue -->
 
-        <!-- Editor's statement to introduce issue -->
-        <div class="editor-statement">
-            The Editor's statement. Embed the issue below so that it appears as spread and is flipped when going to next page.
-        </div>
+  <!-- Editor's statement to introduce issue -->
+  <div class="editor-statement">
+    The Editor's statement. Embed the issue below so that it appears as spread and is flipped when going to next page.
+  </div>
 
-        <!-- Container for magazine flipbook content(currently just put placeholders here)-->
-        <div id="magazine">
-            <div style="background: white; padding: 40px;">Page 1 content here</div>
-            <div style="background: white; padding: 40px;">Page 2 content here</div>
-        </div>
-    </main>
+  <!-- Container for magazine flipbook content(currently just put placeholders here)-->
+  <div id="magazine">
+    <div style="background: white; padding: 40px;">Page 1 content here</div>
+    <div style="background: white; padding: 40px;">Page 2 content here</div>
+  </div>
+</main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- turn.js library for flipbook effect -->
-    <script src="turn.js"></script>
-    <script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- turn.js library for flipbook effect -->
+<script src="turn.js"></script>
+<script>
         $(document).ready(function() { // This is to prevent any jQuery code from running before the document is finished loading (is ready).
             // Initialize flipbook effect for the magazine container
             $("#magazine").turn({ // jQuery syntax: $(selector).action()
