@@ -190,85 +190,85 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-background"></div>
-        <h1>Plumage</h1>
-        <div class="nav-container">
-            <nav class="nav-bar">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/current">Current Issue</a>
-                <a href="/topics">Topics</a>
-                <a href="/archives">Archives</a>
-                <a href="/contact">Contact us</a>
-                <a href="/subscribe">Subscribe</a>
-                <a href="/contributors">Contributors</a>
-            </nav>
+<header class="header">
+    <div class="header-background"></div>
+    <h1>Plumage</h1>
+    <div class="nav-container">
+        <nav class="nav-bar">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/current">Current Issue</a>
+            <a href="/topics">Topics</a>
+            <a href="/archives">Archives</a>
+            <a href="/contact">Contact us</a>
+            <a href="/subscribe">Subscribe</a>
+            <a href="/contributors">Contributors</a>
+        </nav>
+    </div>
+</header>
+<div class="white-line"></div>
+
+<main class="content">
+    <div class="issue-info">
+        <h2>Le Cygne / The Swan</h2>
+        <div class="issue-date">Issue 01 • December 2024</div>
+    </div>
+
+    <div class="editor-statement">
+        The Editor's statement. Embed the issue below so that it appears as spread and is flipped when going to next page.
+    </div>
+
+    <div id="magazine-container">
+        <div id="magazine">
+            <div style="background: white; padding: 40px;">Page 1 content here</div>
+            <div style="background: white; padding: 40px;">Page 2 content here</div>
         </div>
-    </header>
-    <div class="white-line"></div>
+    </div>
 
-    <main class="content">
-        <div class="issue-info">
-            <h2>Le Cygne / The Swan</h2>
-            <div class="issue-date">Issue 01 • December 2024</div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <img src="/images/pexels-ramaketu-670237.jpg" alt="Wings of Inspiration">
+            <h3>Overview: Wings of Inspiration</h3>
+            <p>By Stéphanie Boulard</p>
         </div>
 
-        <div class="editor-statement">
-            The Editor's statement. Embed the issue below so that it appears as spread and is flipped when going to next page.
+        <div class="feature-card">
+            <img src="/images/Swan pic Webpage_Bird of the Month.jpg" alt="Bird of the Month">
+            <h3>Bird of the Month</h3>
+            <p>By Collin Agarwal and Karen Zheng</p>
         </div>
 
-        <div id="magazine-container">
-            <div id="magazine">
-                <div style="background: white; padding: 40px;">Page 1 content here</div>
-                <div style="background: white; padding: 40px;">Page 2 content here</div>
-            </div>
+        <div class="feature-card">
+            <img src="/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories">
+            <h3>The Swan Stories</h3>
+            <p>By Baudelaire and Victor Hugo</p>
         </div>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="/images/pexels-ramaketu-670237.jpg" alt="Wings of Inspiration">
-                <h3>Overview: Wings of Inspiration</h3>
-                <p>By Stéphanie Boulard</p>
-            </div>
-
-            <div class="feature-card">
-                <img src="/images/Swan pic Webpage_Bird of the Month.jpg" alt="Bird of the Month">
-                <h3>Bird of the Month</h3>
-                <p>By Collin Agarwal and Karen Zheng</p>
-            </div>
-            
-            <div class="feature-card">
-                <img src="/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories">
-                <h3>The Swan Stories</h3>
-                <p>By Baudelaire and Victor Hugo</p>
-            </div>
-            
-            <div class="feature-card">
-                <img src="/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="Leda and the Swan">
-                <h3>Art: A Special Section</h3>
-                <h4>Leda and the Swan in the Arts</h4>
-                <p>By Ella Newell</p>
-            </div>
-
-            <div class="feature-card">
-                <img src="/images/swan pic_webpage_Interview.jpg" alt="Lover of Birds">
-                <h3>Ornithology</h3>
-                <h4>An interview with a lover of birds</h4>
-                <p>By Stéphanie Boulard</p>
-            </div>
-
-            <div class="feature-card">
-                <img src="/images/Swan pic_for Meme-comic.jpeg" alt="Swan Meme">
-                <h3>Swan Meme</h3>
-                <p>By Karen Zheng</p>
-            </div>
+        <div class="feature-card">
+            <img src="/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="Leda and the Swan">
+            <h3>Art: A Special Section</h3>
+            <h4>Leda and the Swan in the Arts</h4>
+            <p>By Ella Newell</p>
         </div>
-    </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="turn.js"></script>
-    <script>
+        <div class="feature-card">
+            <img src="/images/swan pic_webpage_Interview.jpg" alt="Lover of Birds">
+            <h3>Ornithology</h3>
+            <h4>An interview with a lover of birds</h4>
+            <p>By Stéphanie Boulard</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="/images/Swan pic_for Meme-comic.jpeg" alt="Swan Meme">
+            <h3>Swan Meme</h3>
+            <p>By Karen Zheng</p>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="turn.js"></script>
+<script>
         $(document).ready(function() {
             $("#magazine").turn({
                 display: 'double',
