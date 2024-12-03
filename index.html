@@ -383,7 +383,7 @@
  let startPosition = { x: 0, y: 0 };
  let currentPosition = { x: 0, y: 0 };
 
- pdfjsLib.getDocument('/assets/Plumage Issue No1 Le Cygne_The Swan.pdf').promise.then(function(pdf) {
+ pdfjsLib.getDocument('Plumage Issue No1 Le Cygne_The Swan.pdf').promise.then(function(pdf) {
  const totalSpreads = Math.ceil(pdf.numPages / 2);
  totalSpreadsElement.textContent = totalSpreads;
 
